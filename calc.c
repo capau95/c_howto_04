@@ -9,8 +9,12 @@ int main () {
 	printf("Zahl 1:\n");
 	scanf("%f", &zahl1);
 
-	printf("Rechenfunktion: + für Addition | - für Subtraktion | * für Multiplikation | / für Division | p für Potenz | w für Wurzel\n"); 
-	scanf("\n%c", &funktion);
+	do {
+
+		printf("Rechenfunktion: + für Addition | - für Subtraktion | * für Multiplikation | / für Division | p für Potenz | w für Wurzel\n"); 
+		scanf("\n%c", &funktion);
+
+	} while (funktion != '+' || funktion != '-' || funktion != '*' || funktion != '/' || funktion != 'p' || funktion != 'w' );
 
 	if (funktion != 'w') {
 
@@ -37,6 +41,9 @@ int main () {
 		break;
 
 		case 'w': ergebnis = sqrt(zahl1);
+		break;
+
+		default: printf("Geben Sie eine korrekte Rechenfunktion ein!\n");
 		break;
 
 	}
